@@ -146,8 +146,14 @@ class MCP_Adapter_Plugin {
 			return;
 		}
 
-		// Initialize the MCP Adapter after the Abilities API is ready
-		add_action( 'abilities_api_init', array( $this, 'init_mcp_adapter' ), 5 );
+		// Force initialization of the Abilities API registry
+		// This triggers the 'abilities_api_init' action
+		if ( class_exists( 'WP_Abilities_Registry' ) ) {
+			WP_Abilities_Registry::get_instance();
+		}
+
+		// Initialize the MCP Adapter now that the registry is ready
+		$this->init_mcp_adapter();
 
 		// Add example abilities and servers (can be removed in production)
 		add_action( 'mcp_adapter_plugin_example_setup', array( $this, 'register_example_abilities' ) );
@@ -221,9 +227,11 @@ class MCP_Adapter_Plugin {
 				'1.0.0',
 				array( \WP\MCP\Transport\Http\RestTransport::class ),
 				\WP\MCP\Infrastructure\ErrorHandling\ErrorLogMcpErrorHandler::class,
+				null, // Observability handler
 				array( 'mcp-adapter-plugin/site-info' ), // Tools
 				array(), // Resources
-				array()  // Prompts
+				array(), // Prompts
+				function() { return true; } // Allow all access for example server (insecure - for demo only)
 			);
 		} catch ( \Exception $e ) {
 			error_log( 'Failed to create example MCP server: ' . $e->getMessage() );

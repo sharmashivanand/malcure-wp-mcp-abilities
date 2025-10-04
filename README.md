@@ -2,6 +2,16 @@
 
 A WordPress plugin that integrates the WordPress Abilities API with the Model Context Protocol (MCP) to expose WordPress capabilities to AI agents.
 
+## 📚 Documentation
+
+- **[Quick Start Guide](docs/QUICKSTART.md)** - Get up and running quickly
+- **[Installation Guide](docs/INSTALLATION.md)** - Detailed installation instructions
+- **[Developer Guide](docs/DEVELOPER.md)** - Extending and customizing the plugin
+- **[Visual Guide](docs/README_VISUAL.md)** - Visual documentation and diagrams
+- **[Project Summary](docs/PROJECT_SUMMARY.md)** - Architecture and design overview
+- **[Analysis](docs/ANALYSIS.md)** - Technical analysis and implementation details
+- **[Recent Fixes](docs/FIXES.md)** - Latest bug fixes and improvements
+
 ## Overview
 
 This plugin serves as a wrapper around two core components:
@@ -52,6 +62,15 @@ This plugin serves as a wrapper around two core components:
 mcp-adapter/
 ├── mcp-adapter-plugin.php          # Main plugin file
 ├── README.md                        # This file
+├── CHANGELOG.md                     # Version history
+├── docs/                            # Documentation
+│   ├── QUICKSTART.md               # Quick start guide
+│   ├── INSTALLATION.md             # Installation instructions
+│   ├── DEVELOPER.md                # Developer guide
+│   ├── README_VISUAL.md            # Visual documentation
+│   ├── PROJECT_SUMMARY.md          # Project architecture
+│   ├── ANALYSIS.md                 # Technical analysis
+│   └── FIXES.md                    # Recent bug fixes
 ├── includes/                        # Plugin core files
 │   ├── class-mcp-adapter-plugin.php # Main plugin class
 │   ├── admin/                       # Admin interface

@@ -3,19 +3,19 @@
  * MCP Adapter Plugin
  *
  * @package     mcp-adapter-plugin
- * @author      WordPress.org Contributors
- * @copyright   2025 Plugin Contributors
+ * @author      Malcure.com
+ * @copyright   2025 Malcure.com
  * @license     GPL-2.0-or-later
  *
  * @wordpress-plugin
  * Plugin Name:       MCP Adapter Plugin
- * Plugin URI:        https://github.com/WordPress/mcp-adapter
+ * Plugin URI:        https://github.com/sharmashivanand/malcure-wp-mcp-abilities
  * Description:       Integrates WordPress Abilities API with Model Context Protocol (MCP) to expose WordPress capabilities to AI agents as tools, resources, and prompts.
  * Requires at least: 6.8
  * Version:           0.1.0
  * Requires PHP:      8.1
- * Author:            WordPress.org Contributors
- * Author URI:        https://github.com/WordPress/mcp-adapter/graphs/contributors
+ * Author:            Malcure.com
+ * Author URI:        https://github.com/sharmashivanand/malcure-wp-mcp-abilities/graphs/contributors
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       mcp-adapter-plugin
