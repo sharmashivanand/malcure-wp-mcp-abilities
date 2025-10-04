@@ -14,19 +14,12 @@
   ],
   "authors": [
     {
-      "name": "WordPress Team",
-      "homepage": "https://wordpress.org"
+      "name": "Malcure Team",
+      "homepage": "https://malcure.com"
     }
   ],
   "require": {
     "php": ">=8.1"
-  },
-  "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-    "phpcompatibility/php-compatibility": "^9.3",
-    "phpcompatibility/phpcompatibility-wp": "^2.1",
-    "squizlabs/php_codesniffer": "^3.10",
-    "wp-coding-standards/wpcs": "^3.1"
   },
   "scripts": {
     "lint:php": "phpcs --standard=WordPress --extensions=php includes/ mcp-adapter-plugin.php",
@@ -37,10 +30,7 @@
   },
   "config": {
     "sort-packages": true,
-    "optimize-autoloader": true,
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
+    "optimize-autoloader": true
   },
   "support": {
     "issues": "https://github.com/wordpress/mcp-adapter/issues",
